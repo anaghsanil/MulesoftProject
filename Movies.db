@@ -1,0 +1,44 @@
+mysql> create database Movies;
+Query OK, 1 row affected (0.02 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| cinemas            |
+| information_schema |
+| movies             |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use Movies
+Database changed
+mysql> create table Films(Name VARCHAR(30),Actor VARCHAR(50),Actress VARCHAR(50),Director VARCHAR(50),Release_Year INT NOT NULL,PRIMARY KEY(Name));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> INSERT INTO Films VALUES('Inception','Leonardo DiCaprio','Marion Cotillard','Christopher Nolan',2010);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Films VALUES('The Prestige','Christian Bale','Scarlett Johansson','Christopher Nolan',2006);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Films VALUES('The Matrix','Keanu Reeves','Carrie-Anne Moss','Lena Wachowski',1999);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO Films VALUES('Avengers:Endgame','Robert Downey Jr.','Brie Larson','Russo Brothers',2019);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM Films;
++------------------+-------------------+--------------------+-------------------+--------------+
+| Name             | Actor             | Actress            | Director          | Release_Year |
++------------------+-------------------+--------------------+-------------------+--------------+
+| Avengers:Endgame | Robert Downey Jr. | Brie Larson        | Russo Brothers    |         2019 |
+| Inception        | Leonardo DiCaprio | Marion Cotillard   | Christopher Nolan |         2010 |
+| The Matrix       | Keanu Reeves      | Carrie-Anne Moss   | Lena Wachowski    |         1999 |
+| The Prestige     | Christian Bale    | Scarlett Johansson | Christopher Nolan |         2006 |
++------------------+-------------------+--------------------+-------------------+--------------+
+4 rows in set (0.00 sec)
+
